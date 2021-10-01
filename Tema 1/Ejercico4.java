@@ -1,17 +1,22 @@
 import java.util.*;
+
 class Ejercicio4
 {
     
     public static void main(String args[])
     {
-	    Scanner entrada = new Scanner(System.in);
+        float x;
+        float resultado;
+	      
+        Scanner entradaTeclado;
+        entradaTeclado = new Scanner(System.in);
         
-        System.out.println("Enter the side: ");
-        
-        int lado= entrada.nextInt();
-	    
-        int resultado = lado*lado;
+        x = entradaTeclado.nextFloat();
 
-	    System.out.print(resultado);
+        entradaTeclado.close();
+	    
+        resultado = x*x;
+
+	    System.out.println(resultado);
     }
 }
