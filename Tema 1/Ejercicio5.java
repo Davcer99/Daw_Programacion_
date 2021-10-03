@@ -5,18 +5,34 @@ class Ejercicio5 {
     public static void main(String args[]) {
      
         float x;
-        float resultado;
+        float y;
+        float suma;
+        float resta;
+        float multiplicacion;
+        float division;
 	      
         Scanner entradaTeclado;
         entradaTeclado = new Scanner(System.in);
+
+        System.out.println("Introduce el primer numero ");
         
         x = entradaTeclado.nextFloat();
 
+        System.out.println("Introduce el segundo numero ");
+
+        y = entradaTeclado.nextFloat(); 
+
         entradaTeclado.close();
 	    
-        resultado = x*x;
+        suma = x + y;
+        resta = x - y;
+        multiplicacion = x * y;
+        division = x / y;
 
-	    System.out.println(resultado);  
+	    System.out.println("suma = "+ suma +  
+                           "\nresta = " + resta + 
+                           "\nmultiplicacion = " + multiplicacion +
+                           "\ndivision = " + division );  
     }
     
 }
