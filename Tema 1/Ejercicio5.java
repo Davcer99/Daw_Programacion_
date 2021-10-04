@@ -4,23 +4,19 @@ class Ejercicio5 {
   
     public static void main(String args[]) {
      
-        float x;
-        float y;
-        float suma;
-        float resta;
-        float multiplicacion;
-        float division;
-	      
+        int x, y;
+        int suma, resta, multiplicacion, division ;
+    
         Scanner entradaTeclado;
         entradaTeclado = new Scanner(System.in);
 
         System.out.println("Introduce el primer numero ");
         
-        x = entradaTeclado.nextFloat();
+        x = entradaTeclado.nextInt();
 
         System.out.println("Introduce el segundo numero ");
 
-        y = entradaTeclado.nextFloat(); 
+        y = entradaTeclado.nextInt(); 
 
         entradaTeclado.close();
 	    
