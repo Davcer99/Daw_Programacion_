@@ -4,20 +4,17 @@ class Ejercicio7 {
   
     public static void main(String args[]) {
      
-        int pi;
-        int pf;
-        int descuento;
+        double pi, pf;
+        double descuento;
        
         Scanner entradaTeclado;
         entradaTeclado = new Scanner(System.in);
 
         System.out.println("Introduce el precio inicial ");
-        
-        pi = entradaTeclado.nextInt();
+        pi = entradaTeclado.nextDouble();
 
         System.out.println("Introduce el precio final ");
-
-        pf = entradaTeclado.nextInt(); 
+        pf = entradaTeclado.nextDouble(); 
 
         entradaTeclado.close();
 
