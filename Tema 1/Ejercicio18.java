@@ -2,21 +2,23 @@ import java.util.Scanner;
 
 public class Ejercicio18 {
     public static void main(String args[]) {
-        byte precio_hora, horas_trabajadas;
+        byte horas, minutos, segundos;
           
         Scanner entradaTeclado;
         entradaTeclado = new Scanner(System.in);
         
-        System.out.println("Precio por hora ");
-        precio_hora = entradaTeclado.nextByte();
+        System.out.println("Introduce la hora en formato hh ");
+        horas = entradaTeclado.nextByte();
 
-        System.out.println("Horas trabajadas ");
-        horas_trabajadas = entradaTeclado.nextByte();
+        System.out.println("Introduce los minutos en formato mm ");
+        minutos = entradaTeclado.nextByte();
 
-        
+        System.out.println("Introduce los segundos en formato ss ");
+        segundos = entradaTeclado.nextByte();
 
         entradaTeclado.close();
 
+        
         segundos ++;
         
         System.out.println(horas + ":" + minutos + ":" + segundos);
