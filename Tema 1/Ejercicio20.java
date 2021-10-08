@@ -14,7 +14,9 @@ public class Ejercicio20 {
 
         entradaTeclado.close();
 
-        if ()
+        if () {
+            
+        }
 
     }
         
