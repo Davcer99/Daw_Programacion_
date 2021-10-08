@@ -13,7 +13,7 @@ public class Ejercicio14 {
 
         entradaTeclado.close();
 
-        if (nota < 3){
+        if (nota >= 0 && nota < 3){
             System.out.println("Nota muy deficiente");
         }else if(nota >= 3 && nota < 5){
             System.out.println("Nota insuficiente");
