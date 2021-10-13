@@ -11,11 +11,11 @@ class Control01 {
         
         System.out.println("Dime el numero de lados del poligono: ");
         lados = entradaTeclado.nextInt();
-        
 
         if (lados == 3 || lados ==4){
             System.out.println("Dime la longitud del lado del poligono: ");
             longitud = entradaTeclado.nextDouble();
+            
             if (lados == 3){
                 System.out.println("El perimetro del triangulo es: " + longitud * 3);
             }else{
