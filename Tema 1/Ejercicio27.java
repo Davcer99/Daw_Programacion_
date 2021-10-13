@@ -4,7 +4,7 @@ public class Ejercicio27 {
     
     public static void main(String args[]){
     
-        int numero, = 1;
+        int numero, i = 1;
         Scanner entradaTeclado;
         entradaTeclado = new Scanner(System.in);
         
@@ -12,14 +12,10 @@ public class Ejercicio27 {
         numero = entradaTeclado.nextInt();
         entradaTeclado.close();
 
-        while (numero != 0){
-             
-            
+        while (numero != (i - 1)){
+            System.out.print(i + ", ");
+            i ++;
         }
-        
-        System.out.println("El resultado del factorial es: " + resultado);
-  
-
     }
         
 }
