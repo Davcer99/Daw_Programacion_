@@ -12,7 +12,7 @@ public class Ejercicio26 {
         numero = entradaTeclado.nextInt();
         entradaTeclado.close();
 
-        while ( i != 10){
+        while ( i != 11){
              
             resultado = numero * i;
             System.out.println(numero + " x " + i + " = " + resultado);
