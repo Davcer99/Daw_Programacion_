@@ -4,7 +4,7 @@ public class Ejercicio28 {
     
     public static void main(String args[]){
     
-        int contador = 0, I, numero;
+        int contador = 0, i, numero;
         Scanner entradaTeclado;
         entradaTeclado = new Scanner(System.in);
         
@@ -12,8 +12,8 @@ public class Ejercicio28 {
         numero = entradaTeclado.nextInt();
         entradaTeclado.close();
  
-        for(I = 1; I <= numero; I++){
-            if((numero % I) == 0){
+        for(i = 1; i <= numero; i++){
+            if((numero % i) == 0){
                 contador++;
             }
             
