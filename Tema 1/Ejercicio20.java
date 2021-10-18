@@ -15,12 +15,17 @@ public class Ejercicio20 {
         entradaTeclado.close();
 
         if ( precio >= 6 && precio < 60) {
-            descuento5 = precio * 5 / 100;
+
+            descuento5 = precio * 0.5f;
             System.out.println("Se aplicara un descuento del 5% \nEl precio final del producto es = " + (precio - descuento5));
+
         }else if (precio >=60) {
-            descuento10 = precio * 10 /100;
+
+            descuento10 = precio * 0.10f;
             System.out.println("Se aplicara un descuento del 10% \nEl precio final del producto es = " + (precio - descuento10));
+
         }else {
+
             System.out.println("No se aplicara ningun descuento");
         }
 
