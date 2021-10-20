@@ -18,7 +18,10 @@ public class Ejercicio30 {
         
         for (int i = 0;i >= mitad; i++){
             char char1 = palabra.charAt(i);
-            char char2 = palabra.charAt()
+            char char2 = palabra.charAt(i + mitad);
+            if (char1 == char2){
+                
+            }
         }
     }     
 }

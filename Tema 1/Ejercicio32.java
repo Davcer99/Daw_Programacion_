@@ -5,26 +5,26 @@ public class Ejercicio32 {
     public static void main(String args[]){
     
         int entrada;
-        int[] dias;
+        int[] numeros;
+
+        numeros = new int[10];
 
         Scanner entradaTeclado;
         entradaTeclado = new Scanner(System.in);
-        
-        System.out.println("Introduce la palabra: ");
-        
-        for (int i = 0; )
-        entrada = entradaTeclado.nextInt();
+
+        for (int i = 0;i < 10; i++ ){
+            System.out.println("Introduce un numero: ");  
+            entrada = entradaTeclado.nextInt();
+            numeros [i] = entrada;
+        }
         
         entradaTeclado.close();
         
-        dias = new int[7];
+        System.out.println("Los numeros introducidos en el orden inverso es el siguiente: ");
         
-        dias[0] = 5;
-        dias[1] = 3;
+        for (int x = 9; x <= 10 || x == 0; x--){
 
-        for (int i = 0; i < 7; i++){
-            System.out.println(dias[i]);
-        }
-        
+            System.out.println(numeros[x]);
+        } 
     }     
 }
