@@ -13,8 +13,6 @@ public class Ejercicio33 {
         Scanner entradaTeclado;
         entradaTeclado = new Scanner(System.in);
 
-       
-
         for (int i = 0;i < 23; i++ ){
             switch (i) {
                 case 0:
@@ -98,8 +96,6 @@ public class Ejercicio33 {
 
         operacion = numero % 23;
 
-        System.out.println("Tu dni conmpleto sera:" + numero + letras[operacion]);
-        
-        
+        System.out.println("Tu dni conmpleto sera:" + numero + letras[operacion]);  
     }     
 }
