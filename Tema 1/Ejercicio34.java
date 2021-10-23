@@ -11,7 +11,7 @@ public class Ejercicio34 {
         Scanner entradaTeclado;
         entradaTeclado = new Scanner(System.in);
         
-        System.out.println("Introduce los numeros de tu DNI");
+        System.out.println("Introduce los numeros de tu NIE");
         numero = entradaTeclado.next();
         entradaTeclado.close();
 
