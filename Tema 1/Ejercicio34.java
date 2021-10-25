@@ -32,6 +32,6 @@ public class Ejercicio34 {
 
        operacion = numero_calculo % 23;
 
-       System.out.println("Tu dni conmpleto sera:" + numero_print + letras[operacion]);  
+       System.out.println("Tu nia conmpleto sera:" + numero_print + letras[operacion]);  
     }     
 }
