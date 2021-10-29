@@ -24,9 +24,33 @@ public class Entrada {
         return numero;
     }
 
+    public static double getDouble (){
+        
+        double numero;
+        Scanner entradaTeclado;
+       
+        entradaTeclado = new Scanner(System.in);
+        while (true){
+            
+            System.out.println("Introduce un valor");
+            
+           if (entradaTeclado.hasNextDouble()){
+                numero = entradaTeclado.nextDouble();
+                break;
+            }else{
+                entradaTeclado.nextLine();
+            }
+        }
+        entradaTeclado.close();
+         
+        return numero;
+    }  
+
     public static void main (String args[]){
       
       getInteger();
+
+      getDouble();
       
     }
 
