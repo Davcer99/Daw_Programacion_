@@ -5,7 +5,8 @@ public class Ejercico35 {
         
         int nota, media = 0, total_notas= 1, numero_notas = 0;
         boolean fin = false, sobersaliente = false;
-        int[] notas = {0} ;
+        int[] notas;
+        notas =new int [10];
         
         Scanner entradaTeclado;
         entradaTeclado = new Scanner (System.in);
@@ -18,6 +19,7 @@ public class Ejercico35 {
             notas[i] = nota;
             total_notas += nota;
             numero_notas = i;
+            
             if (notas[i] == -1){
                 fin = true;
             } 
@@ -33,8 +35,8 @@ public class Ejercico35 {
         media = total_notas / numero_notas;
         System.out.println("la nota media es: " + media);
 
-        if (sobersaliente = true){
-            System.out.println("Has sacado un sobresaliente" + sobersaliente);
+        if (sobersaliente == true){
+            System.out.println("Has sacado un sobresaliente");
         }
     }  
 }
