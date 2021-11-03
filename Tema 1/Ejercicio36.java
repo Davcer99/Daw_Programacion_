@@ -21,6 +21,6 @@ public class Ejercicio36 {
                 maximo = numeros[i];
             }
         }
-    }
-    
+        System.out.println("El numero máximo es " + maximo);
+    } 
 }
