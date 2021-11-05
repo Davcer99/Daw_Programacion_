@@ -5,7 +5,7 @@ import java.util.Scanner;
 public class E02 {
     public static void main (String []args){
 
-        int area, perimetro;
+        double area, perimetro;
         
         Scanner entradaTeclado;
         entradaTeclado = new Scanner(System.in);
@@ -15,8 +15,9 @@ public class E02 {
 
         entradaTeclado.close();
        
-        perimetro = 2 * Mat
-         
-    }
-    
+        perimetro = 2 * Math.PI * radio;
+        area = Math.PI * (radio * radio);
+
+        System.out.println("Perimetro: " + perimetro + "\nÁrea: " + area);  
+    } 
 }
