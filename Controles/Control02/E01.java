@@ -13,6 +13,6 @@ public class E01 {
 
         entradaTeclado.close();
        
-        System.out.println("Hola, " + nombre);  
+        System.out.println("Hola, " + nombre );  
     }
 }
