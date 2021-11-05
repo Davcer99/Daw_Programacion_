@@ -1,0 +1,357 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch E01",
+            "request": "launch",
+            "mainClass": "Control02.E01",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch E01",
+            "request": "launch",
+            "mainClass": "E01",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArgumentosMain",
+            "request": "launch",
+            "mainClass": "ArgumentosMain",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch ArgumentosSuma",
+            "request": "launch",
+            "mainClass": "ArgumentosSuma",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Control01",
+            "request": "launch",
+            "mainClass": "Control01",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio1",
+            "request": "launch",
+            "mainClass": "Ejercicio1",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio10",
+            "request": "launch",
+            "mainClass": "Ejercicio10",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio11",
+            "request": "launch",
+            "mainClass": "Ejercicio11",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio12",
+            "request": "launch",
+            "mainClass": "Ejercicio12",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio13",
+            "request": "launch",
+            "mainClass": "Ejercicio13",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio14",
+            "request": "launch",
+            "mainClass": "Ejercicio14",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio15",
+            "request": "launch",
+            "mainClass": "Ejercicio15",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio16",
+            "request": "launch",
+            "mainClass": "Ejercicio16",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio17",
+            "request": "launch",
+            "mainClass": "Ejercicio17",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio18",
+            "request": "launch",
+            "mainClass": "Ejercicio18",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio19",
+            "request": "launch",
+            "mainClass": "Ejercicio19",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio2",
+            "request": "launch",
+            "mainClass": "Ejercicio2",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio20",
+            "request": "launch",
+            "mainClass": "Ejercicio20",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio21",
+            "request": "launch",
+            "mainClass": "Ejercicio21",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio22",
+            "request": "launch",
+            "mainClass": "Ejercicio22",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio23",
+            "request": "launch",
+            "mainClass": "Ejercicio23",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio24",
+            "request": "launch",
+            "mainClass": "Ejercicio24",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio25",
+            "request": "launch",
+            "mainClass": "Ejercicio25",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio26",
+            "request": "launch",
+            "mainClass": "Ejercicio26",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio27",
+            "request": "launch",
+            "mainClass": "Ejercicio27",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio28",
+            "request": "launch",
+            "mainClass": "Ejercicio28",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio29",
+            "request": "launch",
+            "mainClass": "Ejercicio29",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio3",
+            "request": "launch",
+            "mainClass": "Ejercicio3",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio30",
+            "request": "launch",
+            "mainClass": "Ejercicio30",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio31",
+            "request": "launch",
+            "mainClass": "Ejercicio31",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio32",
+            "request": "launch",
+            "mainClass": "Ejercicio32",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio33",
+            "request": "launch",
+            "mainClass": "Ejercicio33",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio33B",
+            "request": "launch",
+            "mainClass": "Ejercicio33B",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio34",
+            "request": "launch",
+            "mainClass": "Ejercicio34",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio35",
+            "request": "launch",
+            "mainClass": "Ejercicio35",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio36",
+            "request": "launch",
+            "mainClass": "Ejercicio36",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio37",
+            "request": "launch",
+            "mainClass": "Ejercicio37",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio38",
+            "request": "launch",
+            "mainClass": "Ejercicio38",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio39",
+            "request": "launch",
+            "mainClass": "Ejercicio39",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio4",
+            "request": "launch",
+            "mainClass": "Ejercicio4",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio40",
+            "request": "launch",
+            "mainClass": "Ejercicio40",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio41",
+            "request": "launch",
+            "mainClass": "Ejercicio41",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio5",
+            "request": "launch",
+            "mainClass": "Ejercicio5",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio6",
+            "request": "launch",
+            "mainClass": "Ejercicio6",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio7",
+            "request": "launch",
+            "mainClass": "Ejercicio7",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio8",
+            "request": "launch",
+            "mainClass": "Ejercicio8",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Ejercicio9",
+            "request": "launch",
+            "mainClass": "Ejercicio9",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Entrada",
+            "request": "launch",
+            "mainClass": "Entrada",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch MatesPruebas",
+            "request": "launch",
+            "mainClass": "MatesPruebas",
+            "projectName": "Daw_Programacion__d3f13752"
+        }
+    ]
+}
