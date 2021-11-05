@@ -5,18 +5,21 @@ import java.util.Scanner;
 public class E06 {
     public static void main (String []args){
 
-        double resultado;
+        double cateto_a , cateto_b, resultado;
         
         Scanner entradaTeclado;
         entradaTeclado = new Scanner(System.in);
 
         System.out.print("Ingrese cateto a: ");
-        double medida = entradaTeclado.nextDouble();
+        cateto_a = entradaTeclado.nextDouble();
+
+        System.out.print("Ingrese cateto b: ");
+        cateto_b = entradaTeclado.nextDouble();
 
         entradaTeclado.close();
        
-        resultado = medida / 2.54f;
+        resultado = Math.hypot(cateto_a, cateto_b);
 
-        System.out.println(medida + "cm = " + resultado + "in" );  
+        System.out.println("La hipotenusa es " + resultado);  
     }
 }
