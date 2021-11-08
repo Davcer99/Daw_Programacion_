@@ -1,4 +1,4 @@
-public class Ej1 {
+public class EsDivisible {
     public static boolean esDivisible (int n , int m ){
         if (n % m == 0){
             return true;
