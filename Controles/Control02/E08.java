@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class E08 {
     public static void main (String []args){
-        
+
 
         Scanner entradaTeclado;
         entradaTeclado = new Scanner(System.in);
@@ -13,12 +13,10 @@ public class E08 {
         double numero = entradaTeclado.nextDouble();
 
         entradaTeclado.close();
-       
+
         long iPart = (long) numero;
         double fPart = numero - iPart;
-    
-    
 
-
-
-
+        System.out.println(fPart);
+    }
+}
