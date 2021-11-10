@@ -14,9 +14,9 @@ public class E08 {
 
         entradaTeclado.close();
 
-        long iPart = (long) numero;
-        double fPart = numero - iPart;
+        long entera = (long) numero;
+        double decimal = numero - entera;
 
-        System.out.println(fPart);
+        System.out.println(decimal);
     }
 }
