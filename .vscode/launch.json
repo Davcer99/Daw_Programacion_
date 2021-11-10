@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch EsPrimo",
+            "request": "launch",
+            "mainClass": "EsPrimo",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
             "name": "Launch Positivos",
             "request": "launch",
             "mainClass": "Positivos",
