@@ -10,7 +10,7 @@ public class E04 {
         Scanner entradaTeclado;
         entradaTeclado = new Scanner(System.in);
 
-        System.out.print("Ingrese cateto a: ");
+        System.out.print("Ingrese longitud: ");
         double medida = entradaTeclado.nextDouble();
 
         entradaTeclado.close();
