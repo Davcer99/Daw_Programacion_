@@ -32,6 +32,6 @@ public class Positivos {
         }
         entradaTeclado.close();
 
-        System.out.println("Hay" + positivos(numeros)+ "numeros positivos");
+        System.out.println("Hay " + positivos(numeros)+ " numeros positivos");
     }
 }
