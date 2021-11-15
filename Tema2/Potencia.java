@@ -1,10 +1,13 @@
 public class Potencia {
     
     
-    public static double potencia (double n1, double n2) {
-      double resultado = Math.pow(n1, n2);
-      return resultado;
+  public static double potencia (double x, double n) {
+    if (n == 0){
+      return 1;
+    }else{
+      return (x *potencia(x, n-1));
     }
+  }
     
     public static void main(String[] args) {
        double potencia = potencia(3, 6);
