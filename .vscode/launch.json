@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Ejercicio42",
+            "request": "launch",
+            "mainClass": "Ejercicio42",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
             "name": "Launch MayorDeTres",
             "request": "launch",
             "mainClass": "MayorDeTres",

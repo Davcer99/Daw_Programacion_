@@ -12,7 +12,7 @@ public class Ejercicio41 {
             n1 = n2;
             n2 = t;
             System.out.print( " " + n2 / n1 );
-            i += +1;
+            i ++;
         } 
     }
 }
