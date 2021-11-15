@@ -5,7 +5,7 @@ public class Ejercicio39 {
         Scanner lector = new Scanner(System.in);
         int numero;
 
-        System.out.println("Introduce un numero natural: ");
+        System.out.print("Introduce un numero natural: ");
         numero = lector.nextInt();
         lector.close();
 
