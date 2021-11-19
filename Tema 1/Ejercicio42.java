@@ -18,7 +18,7 @@ public class Ejercicio42 {
         int i = 1;
 
         while (i < y){
-            mult += y;
+            mult += x;
             i ++;
         }
 
