@@ -17,6 +17,7 @@ class Eliminar {
         if (valor < numeros.length){
             numeros[valor] = 0;
             
+            
             for (int i = 0; i < numeros.length; i++) {
                 System.out.print(numeros[i] + ", ");
             }
