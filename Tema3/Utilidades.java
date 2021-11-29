@@ -77,4 +77,10 @@ public class Utilidades {
         }
 		numeros[numeros.length -1] = 0;	
 	}
+
+	public static void mostrarArray(int[] array) {
+        for (int i = 0; i < array.length; i++) {
+            System.out.print(array[i] + ", ");
+        }
+    }
 }

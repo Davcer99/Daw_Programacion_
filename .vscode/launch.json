@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Comunes",
+            "request": "launch",
+            "mainClass": "Comunes",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
             "name": "Launch Duplicados",
             "request": "launch",
             "mainClass": "Duplicados",
