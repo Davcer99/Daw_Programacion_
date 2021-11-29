@@ -69,4 +69,12 @@ public class Utilidades {
 			}
 		}
 	}
+	
+	public static void eliminarElemento (int[]numeros, int numeroBorrar){
+		//movemos todos los numeros hacia la izquierda
+		for (int i = numeroBorrar + 1; i < numeros.length; i++) {
+            numeros[i-1] = numeros[i];
+        }
+		numeros[numeros.length -1] = 0;	
+	}
 }
