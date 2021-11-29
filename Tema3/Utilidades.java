@@ -75,6 +75,7 @@ public class Utilidades {
 		for (int i = numeroBorrar + 1; i < numeros.length; i++) {
             numeros[i-1] = numeros[i];
         }
+		//Ponemos un cero al final del array
 		numeros[numeros.length -1] = 0;	
 	}
 
