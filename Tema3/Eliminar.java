@@ -17,7 +17,7 @@ class Eliminar {
             }
         }
         
-        // Desplazamos todos los valores del array un valor menos 
+        // Desplazamos todos los valores del array un valor menos (mover los numeros hacia la izquierda) 
         for (int i = valor + 1; i < numeros.length; i++) {
             numeros[i-1] = numeros[i];
         }
