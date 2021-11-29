@@ -16,5 +16,9 @@ public class Comunes {
             }
             j= 0;
         }
+        //imprimimos el array con los numeros duplicados
+        for (int i = 0; i < numeros_duplicados.length; i++) {
+            System.out.print(numeros_duplicados[i] + ", ");
+        }
     }
 }

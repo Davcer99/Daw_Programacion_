@@ -19,8 +19,6 @@ class Eliminar {
         // Ponemos un cero al elemento final del array
         numeros[numeros.length -1] = 0;
         //imprimimos el array
-        for (int i = 0; i < numeros.length; i++) {
-            System.out.print(numeros[i] + ", ");
-        }
+        Utilidades.mostrarArray(numeros);
     }
 }
