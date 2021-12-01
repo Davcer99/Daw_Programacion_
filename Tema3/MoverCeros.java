@@ -1,6 +1,6 @@
 public class MoverCeros {
     public static void main(String[] args) {
-       int[] numeros = {0,1,0,2,0,3,0,4};
+       int[] numeros = {0,0,0,2,0,3,0,4};
 
        //Recorremos el array para buscar los ceros 
        for (int i = 0; i < numeros.length; i++) {
