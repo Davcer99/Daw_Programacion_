@@ -9,7 +9,7 @@ public class RellenaMatriz {
             for (int j = 0; j < matriz[i].length; j++) {
                 System.out.print(matriz[i][j] +  " ");
             }
-            System.out.println("\n");
+            System.out.print("\n");
         }
     }
 }
