@@ -11,8 +11,7 @@ public class SumaIgual {
                 if ((n1[i] + n1[j]) == valor){
                     System.out.println(n1[i] + " + " + n1[j]);
                 } 
-            }
-            
+            }  
         } 
     }
 }
