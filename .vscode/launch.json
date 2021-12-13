@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Ends",
+            "request": "launch",
+            "mainClass": "Ends",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
             "name": "Launch Contiene",
             "request": "launch",
             "mainClass": "Contiene",
