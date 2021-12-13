@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Contiene",
+            "request": "launch",
+            "mainClass": "Contiene",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Concatenar",
+            "request": "launch",
+            "mainClass": "Concatenar",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
             "name": "Launch CompararIgnorecase",
             "request": "launch",
             "mainClass": "CompararIgnorecase",
