@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch LastIndexOf",
+            "request": "launch",
+            "mainClass": "LastIndexOf",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
             "name": "Launch Remplazar",
             "request": "launch",
             "mainClass": "Remplazar",
