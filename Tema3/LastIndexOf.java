@@ -6,7 +6,7 @@ public class LastIndexOf {
     public static void main(String[] args) {
         String s0,s1;
         s0 = "Hola que tal ";
-        s1 = "e";
+        s1 = " ";
         
 
         System.out.println(letrasQueContiene(s0, s1));
