@@ -1,4 +1,4 @@
-public class Longitud1 {
+public class Longitud2 {
     public static String[] dividirPalabras (String cadenaDePalabras){
         String[] palabras;
         palabras = Utilidades.dividirEnPalabras(cadenaDePalabras);
