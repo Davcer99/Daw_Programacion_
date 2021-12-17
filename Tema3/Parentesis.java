@@ -1,6 +1,5 @@
 public class Parentesis {
-    public static void main(String[] args) {
-        String cadena = "Hola(que tal)";
+    public static void parentesis (String cadena){
         int contador = 0;
         boolean parentesisMal= false;
 
@@ -18,11 +17,16 @@ public class Parentesis {
             }
 		}
 
-        if(contador == 0){
+        if(contador == 0 && parentesisMal == false){
             System.out.println("Los parentesisi están bien puestos");
         }else if (contador != 0 || parentesisMal == true){
-            System.out.println("Los parentesis están bien puestos");
+            System.out.println("Los parentesis están mal puestos");
         }
+    }
+    public static void main(String[] args) {
+        String cadena = "Hola)que tal)";
+        
+        parentesis(cadena);
 
     }
 }
