@@ -1,8 +1,8 @@
 public class Siglas {
-    public static String[] palabras (String frase) {
+    public static String[] extraerPalabras (String frase) {
         return Utilidades.dividirEnPalabras(frase);
    }
-   public static String siglas (String[] palabras) {
+   public static String extraerSiglas (String[] palabras) {
        String resultado ="";
 
         for (int i = 0; i < palabras.length; i++) {
@@ -17,8 +17,8 @@ public class Siglas {
         String frase = "Educacion de Secundaria e Obligatoria ";
         String[] palabras;
 
-        palabras = palabras(frase);
+        palabras = extraerPalabras(frase);
 
-        System.out.println(siglas(palabras));
+        System.out.println(extraerSiglas(palabras));
     }
 }
