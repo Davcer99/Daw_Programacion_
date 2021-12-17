@@ -24,9 +24,13 @@ public class Parentesis {
         }
     }
     public static void main(String[] args) {
-        String cadena = "Hola)que tal)";
+        String cadena = "(Hola)que (tal)";
+        String cadena1 = "Hola)que (tal)";
+        String cadena2 = "(Hola)que )tal(";
         
         parentesis(cadena);
+        parentesis(cadena1);
+        parentesis(cadena2);
 
     }
 }
