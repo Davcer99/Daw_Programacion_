@@ -5,7 +5,6 @@ public class ChorriChat {
         Random random = new Random();
         int rand = random.nextInt(4); 
         
-       
         System.out.println("__________Chorry Chat__________");
         String palabra = Utilidades.leerCadena("");
         palabra = palabra.toLowerCase();
