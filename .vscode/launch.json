@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Desencriptar",
+            "request": "launch",
+            "mainClass": "Desencriptar",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
+            "name": "Launch Encriptar",
+            "request": "launch",
+            "mainClass": "Encriptar",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
             "name": "Launch Pasatiempos",
             "request": "launch",
             "mainClass": "Pasatiempos",
