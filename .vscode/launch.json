@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Alumno",
+            "request": "launch",
+            "mainClass": "Alumno",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
             "name": "Launch Desencriptar",
             "request": "launch",
             "mainClass": "Desencriptar",
