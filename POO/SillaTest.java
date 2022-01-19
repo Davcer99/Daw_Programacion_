@@ -1,8 +1,27 @@
+import java.util.Random;
+
+
 public class SillaTest {
     public static void main(String[] args) {
+
+        Random ran = new Random();
+        String [] material = {"madera", "alumninio", "plastico", "inoxidable"};
+        String [] color = {"Rojo", "Amarillo", "Verde", "Morado", "Marron", "Azul "};
         
-        Silla silla = new Silla("Rojo", 4, true, 6, "madera", 3, 5);
+        for (int i = 0; i < 100; i++) {
+
+            System.out.println("\nSilla numero " + i + "\n");
+            boolean respaldo = false;
+
+            if (ran.nextInt(1-0+1)+0 == 1){
+                respaldo = true;
+            }else {
+                respaldo = false;
+            }
+
+            Silla iSilla = new Silla(color[ran.nextInt(5-0+1)+0], 4, respaldo, ran.nextInt(10-0+1)+0, material[ran.nextInt(3-0+1)+0], ran.nextInt(100-0+1)+0, ran.nextInt(100-0+1)+0);
         
-        silla.imprimirValores();
+            iSilla.imprimirValores(); 
+        }  
     }
 }
