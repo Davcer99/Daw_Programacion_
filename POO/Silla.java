@@ -22,7 +22,7 @@ public class Silla {
     }
 
     public Silla (){
-        
+
         Random ran = new Random();
         String [] material = {"madera", "alumninio", "plastico", "inoxidable"};
         String [] color = {"Rojo", "Amarillo", "Verde", "Morado", "Marron", "Azul "};
@@ -45,7 +45,7 @@ public class Silla {
 
 
     public void imprimirValores (){
-        System.out.println("Color de la silla " + color + "\nNumero de patas de la silla " + nPatas + "\nTiene respaldo " + respaldo + "\nNivel de comodidad de la silla " + nivelComodidad + "\nMaterial de la silla " + material + "Posición de la silla " + ubicacion );
+        System.out.println("Color de la silla " + color + "\nNumero de patas de la silla " + nPatas + "\nTiene respaldo " + respaldo + "\nNivel de comodidad de la silla " + nivelComodidad + "\nMaterial de la silla " + material + "\nPosición de la silla " + ubicacion );
     }
 
     //Getter
