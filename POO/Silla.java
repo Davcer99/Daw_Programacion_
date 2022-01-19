@@ -46,6 +46,9 @@ public class Silla {
     public int getnPatas() {
         return nPatas;
     }
+    public boolean isRespaldo() {
+        return respaldo;
+    }
 
     //Setter
 
