@@ -16,11 +16,11 @@ public class Silla {
         this.respaldo = respaldo;
         this.nivelComodidad = nivelComodidad;
         this.material = material;
-        this.posicion [1] = posX;
-        this.posicion [2] = posY;
+        this.posicion [0] = posX;
+        this.posicion [1] = posY;
     }
 
     public void imprimirValores (){
-        System.out.println("Color de la silla " + color + "\nNumero de patas de la silla " + nPatas + "\nTiene respaldo " + respaldo + "\nNivel de comodidad de la silla " + nivelComodidad + "\nMaterial de la silla " + material + "Posición de la silla " + posicion [1] + " , " + posicion [2]);
+        System.out.println("Color de la silla " + color + "\nNumero de patas de la silla " + nPatas + "\nTiene respaldo " + respaldo + "\nNivel de comodidad de la silla " + nivelComodidad + "\nMaterial de la silla " + material + "Posición de la silla " + posicion [0] + " , " + posicion [1]);
     }
 }
