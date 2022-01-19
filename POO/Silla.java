@@ -21,6 +21,6 @@ public class Silla {
     }
 
     public void imprimirValores (){
-        System.out.println("Color de la silla " + silla.color + "\nNumero de patas de la silla " + silla.nPatas + "\nTiene respaldo " + silla.respaldo + "\nNivel de comodidad de la silla " + silla.nivelComodidad + "\nMaterial de la silla " + silla.material + "Posición de la silla " + silla.posicion [1] + " , " + silla.posicion [2]);
+        System.out.println("Color de la silla " + color + "\nNumero de patas de la silla " + nPatas + "\nTiene respaldo " + respaldo + "\nNivel de comodidad de la silla " + nivelComodidad + "\nMaterial de la silla " + material + "Posición de la silla " + posicion [1] + " , " + posicion [2]);
     }
 }
