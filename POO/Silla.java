@@ -13,6 +13,7 @@ public class Silla {
     private static String [] materiales = {"madera", "alumninio", "plastico", "inoxidable"};
     private static String [] colores = {"Rojo", "Amarillo", "Verde", "Morado", "Marron", "Azul "};
 
+    //constructores
     public Silla (String color, int nPatas, boolean respaldo, int i, String material, Point ubicacion){
         this.color = color;
         this.nPatas = nPatas;
@@ -21,9 +22,10 @@ public class Silla {
         this.material = material;
         this.ubicacion = ubicacion;
     }
-
+    
+    //constructor silla aleatoria
     public Silla (){
-
+        
         Random ran = new Random();
         
         boolean respaldo = false;
