@@ -95,7 +95,9 @@ public class TicketMachine{
 
     // Constructor
     public TicketMachine(){
-        setPrice(12);
+        price = 0;
+        balance = 0;
+        total = 0;
     }
     
     // Vaciar cajero
