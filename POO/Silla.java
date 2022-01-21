@@ -10,7 +10,8 @@ public class Silla {
     private int nivelComodidad;
     private String material;
     private Point ubicacion;
-
+    private static String [] materiales = {"madera", "alumninio", "plastico", "inoxidable"};
+    private static String [] colores = {"Rojo", "Amarillo", "Verde", "Morado", "Marron", "Azul "};
 
     public Silla (String color, int nPatas, boolean respaldo, int i, String material, Point ubicacion){
         this.color = color;
@@ -24,8 +25,7 @@ public class Silla {
     public Silla (){
 
         Random ran = new Random();
-        String [] material = {"madera", "alumninio", "plastico", "inoxidable"};
-        String [] color = {"Rojo", "Amarillo", "Verde", "Morado", "Marron", "Azul "};
+        
         boolean respaldo = false;
         Point ubicacion = new Point (ran.nextInt(100-0+1)+0, ran.nextInt(100-0+1)+0);
 
@@ -35,11 +35,11 @@ public class Silla {
             respaldo = false;
         }
 
-        this.color = color[ran.nextInt(5-0+1)+0];
+        this.color = colores[ran.nextInt(5-0+1)+0];
         this.nPatas = ran.nextInt(6-3+1)+3;
         this.respaldo = respaldo;
         this.nivelComodidad = ran.nextInt(10-0+1)+0;
-        this.material = material[ran.nextInt(3-0+1)+0];
+        this.material = materiales[ran.nextInt(3-0+1)+0];
         this.ubicacion = ubicacion;
     }
 
@@ -73,6 +73,14 @@ public class Silla {
         return respaldo;
     }
 
+    public static String[] getMateriales() {
+        return materiales;
+    }
+
+    public static String[] getColores() {
+        return colores;
+    }
+
     //Setter
 
     public void setNivelComodidad(byte nivelComodidad) {
@@ -97,5 +105,17 @@ public class Silla {
     
     public void setnPatas(int nPatas) {
         this.nPatas = nPatas;
+    }
+
+    public void setNivelComodidad(int nivelComodidad) {
+        this.nivelComodidad = nivelComodidad;
+    }
+
+    public static void setMateriales(String[] materiales) {
+        Silla.materiales = materiales;
+    }
+
+    public static void setColores(String[] colores) {
+        Silla.colores = colores;
     }
 }
