@@ -6,6 +6,5 @@ public class TicketMacine2Test {
         m1.insertMoney(50);
         m1.printTicket();
         System.out.println(m1.refundBalance()); 
-
     }
 }
