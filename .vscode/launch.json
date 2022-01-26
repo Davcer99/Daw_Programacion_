@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch TicketMacine2Test",
+            "request": "launch",
+            "mainClass": "TicketMacine2Test",
+            "projectName": "Daw_Programacion__d3f13752"
+        },
+        {
+            "type": "java",
             "name": "Launch TicketMachineTest",
             "request": "launch",
             "mainClass": "TicketMachineTest",
