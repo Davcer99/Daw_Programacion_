@@ -1,4 +1,4 @@
-public class TestHeater {
+public class HeaterTest {
     public static void main(String[] args) {
         Heater c1 ;
         c1 = new Heater(11, 26);
