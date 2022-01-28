@@ -1,4 +1,4 @@
-/**
+/*
  * A class that maintains information on a book.
  * This might form part of a larger application such
  * as a library system, for instance.
@@ -11,7 +11,7 @@ class Book
     private int pages;
     private String refNumber;
     private int borrowed;
-    private boolean courseText;
+    private final boolean courseText;
 
 
     /**
@@ -71,7 +71,7 @@ class Book
     // count
 
     public void borrow (){
-        this.borrowed ++;
+        this.borrowed++;
     }
     
     //details
