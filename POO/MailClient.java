@@ -52,7 +52,14 @@ public class MailClient
      */
     public void sendMailItem(String to,String asunto, String message)
     {
-        MailItem item = new MailItem(user, to, asunto, message);
-        server.post(item);
+        String [] para = to.split(";");
+        
+       for (int i = 0; i < para.length; i++) {
+        MailItem item = new MailItem(user, para[i], asunto, message);
+        server.post(item);  
+       }
+        
     }
+
+    
 }
