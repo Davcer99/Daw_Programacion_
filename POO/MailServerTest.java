@@ -7,9 +7,10 @@ public class MailServerTest {
         System.out.println(server.howManyMailItems("Paco"));
         System.out.println(server.howManyMailItems("Javier"));
 
-        paco.sendMailItem("Paco;Javier", "dudas", "no hay dudas");
-        paco.sendMailItem("Paco", "recibo", "bla bla bla");
-        javier.sendMailItem("Paco;Javier", "ja", "jajajjajaj");
+        paco.sendMailItem("Javier", "dudas", "no hay dudas");
+        paco.sendMailItem("Paco;Javier", "recibo", "bla bla bla");
+        javier.sendMailItem("Paco", "ja", "jajajjajaj");
+        javier.forwardLastMailItem("Paco");
 
         System.out.println(server.howManyMailItems("Paco"));
         System.out.println(server.howManyMailItems("Javier"));

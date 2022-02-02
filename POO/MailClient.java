@@ -29,6 +29,13 @@ public class MailClient
         return server.getNextMailItem(user);
     }
 
+    public void forwardLastMailItem (String forwardTo){
+        MailItem mem = getNextMailItem();
+        MailItem item1 = new MailItem(mem.getFrom(), forwardTo, mem.getAsunto(), mem.getMessage());
+        server.post(item1);
+        mem.print();
+    }
+
     /**
      * Print the next mail item (if any) for this user to the text 
      * terminal.
@@ -53,7 +60,7 @@ public class MailClient
     public void sendMailItem(String to,String asunto, String message)
     {
         String [] para = to.split(";");
-        
+
        for (int i = 0; i < para.length; i++) {
         MailItem item = new MailItem(user, para[i], asunto, message);
         server.post(item);  
