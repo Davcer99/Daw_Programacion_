@@ -31,9 +31,13 @@ public class MailClient
 
     public void forwardLastMailItem (String forwardTo){
         MailItem mem = getNextMailItem();
-        MailItem item1 = new MailItem(mem.getFrom(), forwardTo, mem.getAsunto(), mem.getMessage());
-        server.post(item1);
-        mem.print();
+        if (mem == null) {
+            System.out.println("No new mail to forward.");
+        }else {
+            MailItem item1 = new MailItem(mem.getFrom(), forwardTo, mem.getAsunto(), mem.getMessage());
+            server.post(item1);
+            mem.print();
+        }  
     }
 
     /**
@@ -59,10 +63,9 @@ public class MailClient
      */
     public void sendMailItem(String to,String asunto, String message)
     {
-        String [] para = to.split(";");
 
-       for (int i = 0; i < para.length; i++) {
-        MailItem item = new MailItem(user, para[i], asunto, message);
+       for (String nombre : to.split(";")) {
+        MailItem item = new MailItem(user, nombre, asunto, message);
         server.post(item);  
        }
         
