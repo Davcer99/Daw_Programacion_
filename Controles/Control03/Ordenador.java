@@ -34,6 +34,9 @@ public class Ordenador {
     public void setTeclado(Teclado teclado) {
         this.teclado = teclado;
     }
+    public Ordenador getPcConectado() {
+        return pcConectado;
+    }
 
     //imprimir
     public void imprimir (){
@@ -49,10 +52,8 @@ public class Ordenador {
 
     //coexion con otro pc
     public void conectar(Ordenador pcConectado) {
-        if (pcConectado == null){
+        if (pcConectado != null){
             this.pcConectado = pcConectado; 
-        }else{
-            System.out.println("Ya hay un pc conectado");
-        }  
+        } 
     }
 }
