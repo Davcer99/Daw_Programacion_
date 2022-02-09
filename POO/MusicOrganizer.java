@@ -62,17 +62,14 @@ public class MusicOrganizer
 
     // Método para comprobar indice
     public void chekIndex(int index) {
-        if(index < 0 || index > files.size()) {
-            System.out.println("El indice no es válido");
+        if(index < 0 || index >= files.size()) {
+            System.out.println("El rango valido de valores esta entre 0 y" + (files.size()-1));
         } 
     }
 
     // Método para comprobar indice y devolver un boolean
     public boolean isValidIndex (int index){
-        if(index < 0 && index > files.size()) {
-            return false;
-        }else{
-            return true;
-        }
+        return(index >= 0 && (index < files.size()));
+       
     }
 }
