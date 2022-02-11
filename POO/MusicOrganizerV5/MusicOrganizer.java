@@ -172,4 +172,13 @@ public class MusicOrganizer
             addTrack(track);
         }
     }
+
+    // imprimir todas las canciones que coincidan con la cadena
+    public void findTitle (String searchString){
+        for (Track cancion :tracks) {
+            if (cancion.getTitle().contains(searchString)){
+                System.out.println(cancion.getTitle());
+            }
+        }
+    }
 }
