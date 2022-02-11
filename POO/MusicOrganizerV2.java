@@ -127,6 +127,7 @@ public class MusicOrganizerV2
     }
 
     public int findFirst(String searchString){
+        
         ArrayList<String> resultado= getMatching(searchString);
 
         if (resultado.size()== 0){
