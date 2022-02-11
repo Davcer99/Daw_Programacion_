@@ -92,31 +92,26 @@ public class MusicOrganizerV2
 
     // listar las cadenas que contengan algo especifico
     public void listMatching (String match){
-        int cont = 0;
-        for (String elemento : files) {
-            if (elemento.contains(match)){
-                System.out.println(elemento);
-                cont++;
-            }    
-        }
-        if (cont == 0){
+        ArrayList<String> listado = getMatching(match);
+        
+        if (listado.size()== 0){
             System.out.println("No se ha encontrado ninguna canción");
+        }else{
+            for (int i = 0; i < listado.size(); i++) {
+                System.out.println(listado.get(i));
+            }
         }
     }
 
     // play matching 
     public void playtMatching (String match){
-        int cont = 0;
-        for (String elemento : files) {
-            if (elemento.contains(match)){
-                System.out.println(elemento);
-                cont++;
-                player.playSample(elemento);
-            }    
-        }
-        if (cont == 0){
-            System.out.println("No se ha encontrado ninguna canción");
-        }
+        
+        for (String elemento : getMatching(match)) {
+        
+            System.out.println(elemento);
+            player.playSample(elemento);
+              
+        } 
     }
 
     public ArrayList<String> getMatching(String match){
@@ -129,5 +124,16 @@ public class MusicOrganizerV2
             }    
         }
        return resultado;
+    }
+
+    public int findFirst(String searchString){
+        ArrayList<String> resultado= getMatching(searchString);
+
+        if (resultado.size()== 0){
+            return -1;
+        }else{
+            return files.indexOf(resultado.get(0));
+        }
+        
     }
 }
