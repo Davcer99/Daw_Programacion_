@@ -15,6 +15,10 @@ public class Track
     private String title;
     // Where the track is stored.
     private String filename;
+    //album
+    private String album;
+    //contador 
+    private int contador = 0;
     
     /**
      * Constructor for objects of class Track.
@@ -22,9 +26,9 @@ public class Track
      * @param title The track's title.
      * @param filename The track file. 
      */
-    public Track(String artist, String title, String filename)
+    public Track(String artist, String title, String filename,String album)
     {
-        setDetails(artist, title, filename);
+        setDetails(artist, title, filename,album);
     }
     
     /**
@@ -35,7 +39,7 @@ public class Track
      */
     public Track(String filename)
     {
-        setDetails("unknown", "unknown", filename);
+        setDetails("unknown", "unknown", filename, "unknown");
     }
     
     /**
@@ -71,7 +75,7 @@ public class Track
      */
     public String getDetails()
     {
-        return artist + ": " + title + "  (file: " + filename + ")";
+        return artist + ": " + title + "  (file: " + filename + ")" + "Album: " + album;
     }
     
     /**
@@ -80,11 +84,24 @@ public class Track
      * @param title The track's title.
      * @param filename The track file. 
      */
-    private void setDetails(String artist, String title, String filename)
+    private void setDetails(String artist, String title, String filename, String album)
     {
         this.artist = artist;
         this.title = title;
         this.filename = filename;
+        this.album=album;
+    }
+
+    public void incplayCount(){
+        contador++;
+    }
+
+    public void rsetContador() {
+        this.contador = 0;
+    }
+
+    public int getContador() {
+        return contador;
     }
     
 }

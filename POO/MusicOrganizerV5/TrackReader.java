@@ -77,6 +77,6 @@ public class TrackReader
                 title = titlePart;
             }
         }
-        return new Track(artist, title, filename);
+        return new Track(artist, title, filename, "unknown");
     }
 }
