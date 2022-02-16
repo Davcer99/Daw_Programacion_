@@ -26,9 +26,9 @@ public class Track
      * @param title The track's title.
      * @param filename The track file. 
      */
-    public Track(String artist, String title, String filename,String album)
+    public Track(String artist, String title, String filename)
     {
-        setDetails(artist, title, filename,album);
+        setDetails(artist, title, filename);
     }
     
     /**
@@ -39,7 +39,7 @@ public class Track
      */
     public Track(String filename)
     {
-        setDetails("unknown", "unknown", filename, "unknown");
+        setDetails("unknown", "unknown", filename);
     }
     
     /**
@@ -75,7 +75,7 @@ public class Track
      */
     public String getDetails()
     {
-        return artist + ": " + title + "  (file: " + filename + ")" + "Album: " + album;
+        return artist + ": " + title + "  (file: " + filename + ")"+ " " + album;
     }
     
     /**
@@ -84,12 +84,11 @@ public class Track
      * @param title The track's title.
      * @param filename The track file. 
      */
-    private void setDetails(String artist, String title, String filename, String album)
+    private void setDetails(String artist, String title, String filename)
     {
         this.artist = artist;
         this.title = title;
         this.filename = filename;
-        this.album=album;
     }
 
     public void incplayCount(){
@@ -104,4 +103,11 @@ public class Track
         return contador;
     }
     
+    public String getAlbum() {
+        return album;
+    }
+
+    public void setAlbum(String album) {
+        this.album = album;
+    }
 }
