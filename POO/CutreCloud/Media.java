@@ -7,44 +7,43 @@ public class Media {
     private int id;
     private String nombre;
     private String contenido;
-    private String tipo;
+    private MediaType tipo;
     private int usuario_id;
     private static ArrayList<Media> listadoMedia = new ArrayList<Media>();
-    private static ArrayList<String> listadoNombres = new ArrayList<String>();
-    private static ArrayList<Integer> listadoId = new ArrayList<Integer>();
+
     
-    public Media(int id, String nombre, String contenido, String tipo, Usuario usuario_id) {
+    public Media(int id, String nombre, String contenido, MediaType tipo, Usuario usuario_id) {
         this.id = comprobarId(id);
         this.nombre = comprobarNombre(nombre);
         this.contenido = contenido;
-        this.tipo = comprobarTipo(tipo);
+        this.tipo = tipo;
         this.usuario_id = usuario_id.getId();
         listadoMedia.add(this);
-        listadoNombres.add(nombre);
-    }
-
-    private String comprobarTipo (String tipo){
-        if( tipo.equalsIgnoreCase("video")||tipo.equalsIgnoreCase("audio")||tipo.equalsIgnoreCase("imagen")){
-            return tipo;
-        }else{
-            return"El tipo no es correcto";
-        }
     }
 
     private int comprobarId(int id){
-        if(listadoId.contains(id)){
-            return 000;
-        }else{
-            return id;
+        int resulatado = id;
+        for (Media media : listadoMedia) {
+
+            if (id == media.getId()){
+                resulatado = -1;
+                break;
+            }
         }
+
+        return resulatado;
+       
     }
 
     private String comprobarNombre(String nombre){
-        if(listadoNombres.contains(nombre)){
-            return "El nombre ya existe";
-        }else{
-            return nombre;
+
+        for (Media media : listadoMedia) {
+
+            if (media.getNombre().equals(nombre)){
+                return "El nombre ya existe";
+            }
         }
+        return nombre;
     }
 
     public static ArrayList<Media> getListadoMedia() {
@@ -75,14 +74,6 @@ public class Media {
         this.contenido = contenido;
     }
 
-    public String getTipo() {
-        return tipo;
-    }
-
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
-    }
-
     public int getUsuario_id() {
         return usuario_id;
     }
@@ -93,14 +84,6 @@ public class Media {
 
     public static void setListadoMedia(ArrayList<Media> listadoMedia) {
         Media.listadoMedia = listadoMedia;
-    }
-
-    public static ArrayList<String> getListadoNombres() {
-        return listadoNombres;
-    }
-
-    public static void setListadoNombres(ArrayList<String> listadoNombres) {
-        Media.listadoNombres = listadoNombres;
     }
 
     @Override
