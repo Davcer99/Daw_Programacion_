@@ -10,29 +10,16 @@ public class Media {
     private MediaType tipo;
     private int usuario_id;
     private static ArrayList<Media> listadoMedia = new ArrayList<Media>();
+    private static int idGenerator = 0;
 
     
-    public Media(int id, String nombre, String contenido, MediaType tipo, Usuario usuario_id) {
-        this.id = comprobarId(id);
+    public Media (String nombre, String contenido, MediaType tipo, Usuario usuario_id) {
+        this.id = idGenerator++;
         this.nombre = comprobarNombre(nombre);
         this.contenido = contenido;
         this.tipo = tipo;
         this.usuario_id = usuario_id.getId();
         listadoMedia.add(this);
-    }
-
-    private int comprobarId(int id){
-        int resulatado = id;
-        for (Media media : listadoMedia) {
-
-            if (id == media.getId()){
-                resulatado = -1;
-                break;
-            }
-        }
-
-        return resulatado;
-       
     }
 
     private String comprobarNombre(String nombre){
