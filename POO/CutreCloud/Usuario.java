@@ -2,11 +2,18 @@ package CutreCloud;
 
 import java.util.ArrayList;
 
+import java.util.Iterator;
+
 public class Usuario {
-    //Usuario id, email, password
-    //Media id, nombre, contenido, tipo, usuario_id
-    //El tipo debe ser de video audio o imagen 
-    
+    /*
+    Usuario id, email, password
+    Media id, nombre, contenido, tipo, usuario_id
+    El tipo debe ser de video audio o imagen 
+    Implementar la eliminación de un archivo de media de la aplicación por nombre de fichero
+    eliminar todos los media de un tipo concreto
+    eliminar un usuario por email y eliminar sus media
+    eliminar usuarios de un dominio
+    */
     private int id;
     private String email;
     private String password;
@@ -34,6 +41,32 @@ public class Usuario {
             }
         }
         return resultado;
+    }
+
+    // método para eliminar un usuario por email
+
+    public static void eliminarUsuario(String email){
+        Iterator<Usuario> it = listadoUsuarios.iterator();
+        while (it.hasNext()) {
+            Usuario user = it.next();
+            if (user.getEmail().equals(email)){
+                Media.eliminarMediaId(user.id);
+                it.remove();
+            }
+        }
+    }
+
+    //método para eliminar un usuario mediante un dominio
+
+    public static void eliminarDominio(String dominio){
+        Iterator<Usuario> it = listadoUsuarios.iterator();
+        while(it.hasNext()) {
+            Usuario user = it.next();
+            if (user.email.contains(dominio)){
+                it.remove();
+            }
+            
+        }
     }
 
     public int getId() {

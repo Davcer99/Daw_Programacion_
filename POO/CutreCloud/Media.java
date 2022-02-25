@@ -1,6 +1,7 @@
 package CutreCloud;
 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 public class Media {
 
@@ -31,6 +32,43 @@ public class Media {
             }
         }
         return nombre;
+    }
+
+    //método para eliminar un media por su nombre
+
+    public static void eliminarMedia (String nombre){
+        Iterator<Media> it = listadoMedia.iterator();
+        while (it.hasNext()){
+            Media media = it.next();
+            if (media.getNombre().equals(nombre)){
+                it.remove();;
+            }
+        }
+    }
+
+    //método para borrar un media por su tipo
+
+    public static void eliminarTipoMedia (MediaType tipo){
+        Iterator<Media> it= listadoMedia.iterator();
+        while(it.hasNext()){
+            Media actual = it.next();
+            if (actual.getTipo().equals(tipo)){
+                it.remove();
+            }
+        }
+    }
+    
+    //método para eliminar por id
+
+    public static void eliminarMediaId(int id){
+        Iterator<Media> it = listadoMedia.iterator();
+
+        while (it.hasNext()) {
+            Media media = it.next();
+            if (media.getUsuario_id()== id){
+                it.remove();
+            }
+        }
     }
 
     public static ArrayList<Media> getListadoMedia() {
@@ -71,6 +109,10 @@ public class Media {
 
     public static void setListadoMedia(ArrayList<Media> listadoMedia) {
         Media.listadoMedia = listadoMedia;
+    }
+
+    public MediaType getTipo() {
+        return tipo;
     }
 
     @Override
