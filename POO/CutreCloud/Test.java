@@ -10,8 +10,8 @@ public class Test {
         System.out.println(u2.toString());
 
         Media m1, m2;
-        m1 = new Media(1, "media1", "hola", MediaType.AUDIO, u1);
-        m2 = new Media(2, "media1", "jajaj", MediaType.VIDEO, u2);
+        m1 = new Media( "media1", "hola", MediaType.AUDIO, u1);
+        m2 = new Media( "media1", "jajaj", MediaType.VIDEO, u2);
 
         System.out.println(m1.toString());
         System.out.println(m2.toString());
