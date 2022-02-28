@@ -13,14 +13,12 @@ public class Test {
         m1 = new Media( "media1", "hola", MediaType.AUDIO, u1);
         m2 = new Media( "media3", "jajaj", MediaType.VIDEO, u2);
 
-        System.out.println(m1.toString());
-        System.out.println(m2.toString());
-
-        System.out.println(Usuario.getListadoUsuarios());
-        System.out.println(Media.getListadoMedia()); 
-
-        Media.eliminarMedia("media3");
-        Media.eliminarTipoMedia(MediaType.AUDIO);
-        Usuario.eliminarUsuario("10@gmail.com"); 
+        System.out.println(u1.generateXML());
+        System.out.println("\n"); 
+        System.out.println(u2.generateXML());
+        System.out.println("\n");
+        System.out.println(m1.generateXML());
+        System.out.println("\n");
+        System.out.println(m2.generateXML());
     }
 }

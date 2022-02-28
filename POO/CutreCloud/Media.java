@@ -1,9 +1,14 @@
 package CutreCloud;
+/*
+Crear una interfaz que se llame ParseXML debe haber un método en las clases que la implementen llamado generateXML()
+En este método se debe impirmir por consola el xml correspondiente a los atributos de cada clase con un string
+*/
+
 
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class Media {
+public class Media implements Xml {
 
     private int id;
     private String nombre;
@@ -119,6 +124,19 @@ public class Media {
     public String toString() {
         return "Media [contenido=" + contenido + ", id=" + id + ", nombre=" + nombre + ", tipo=" + tipo
                 + ", usuario_id=" + usuario_id + "]";
+    }
+
+    
+    public String generateXML() {
+        String resultado= "";
+        resultado += "<Media>\n";
+        resultado += " <id>"+ this.id + "</id>\n";
+        resultado += " <nombre>"+ this.nombre + "</nombre>\n";
+        resultado += " <contenido>"+ this.contenido + "</contenido>\n";
+        resultado += " <tipo>"+ this.tipo + "</tipo>\n";
+        resultado += " <usuario_id>"+ this.usuario_id + "</usuario_id>\n";
+        resultado += "</Media>";
+        return resultado;
     }
     
     

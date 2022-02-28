@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import java.util.Iterator;
 
-public class Usuario {
+public class Usuario implements Xml {
     /*
     Usuario id, email, password
     Media id, nombre, contenido, tipo, usuario_id
@@ -102,4 +102,15 @@ public class Usuario {
     public String toString() {
         return "id: "+ this.id + " email: "+ this.email + " password: " + this.password;
     }
+
+    public String generateXML(){
+        String resultado= "";
+        resultado += "<Usuario>\n";
+        resultado += " <id>"+ this.id + "</id>\n";
+        resultado += " <email>"+ this.email + "</email>\n";
+        resultado += " <password>"+ this.password + "</password>\n";
+        resultado += "</Usuario>";
+        return resultado;
+    }
+
 }
