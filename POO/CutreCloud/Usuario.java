@@ -62,7 +62,7 @@ public class Usuario implements Xml {
         Iterator<Usuario> it = listadoUsuarios.iterator();
         while(it.hasNext()) {
             Usuario user = it.next();
-            if (user.email.contains(dominio)){
+            if (user.email.endsWith(dominio)){
                 it.remove();
             }
             
