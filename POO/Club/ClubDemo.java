@@ -30,8 +30,18 @@ public class ClubDemo
     {
         club.join(new Membership("David", 2, 2004));
         club.join(new Membership("Michael", 1, 2004));
+        club.join(new Membership("Maria", 14,2004));
         System.out.println("The club has " +
                            club.numberOfMembers() +
                            " members.");
+    }
+    public static void main(String[] args) {
+        ClubDemo cd = new ClubDemo();
+        try{
+            cd.demo();
+        } 
+        catch(Exception e ){
+            System.out.println(e.getMessage());
+        }
     }
 }
