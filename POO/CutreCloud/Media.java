@@ -4,6 +4,12 @@ Crear una interfaz que se llame ParseXML debe haber un método en las clases que
 En este método se debe impirmir por consola el xml correspondiente a los atributos de cada clase con un string
 */
 
+/*
+ejercicio 2 
+generar el xml de  los atributos y guardarlo en un fichero
+se puede crear un metodo que se llame write xml que genere un fichero con un documento de texto con el xml
+*/
+
 
 import java.util.ArrayList;
 import java.util.Iterator;
