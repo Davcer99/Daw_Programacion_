@@ -45,7 +45,7 @@ public class Club
      */
     public int joinedInMonth(int month){
         
-        if (month < 0 || month > 12){
+        if (month < 1 || month > 12){
            System.out.println("The month is incorrect"); 
            return 0;
         }else{
@@ -61,14 +61,14 @@ public class Club
 
     public int purge (int month){
         Iterator<Membership> it = memberList.iterator();
-        int cnt =0;
+        int eliminados = 0;
         while(it.hasNext()){
             Membership member = it.next();
             if (member.getMonth() == month){
                 it.remove();
-                cnt++;
+                eliminados++;
             }
         }
-        return cnt;
+        return eliminados;
     }
 }
