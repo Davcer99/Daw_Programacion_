@@ -133,7 +133,7 @@ public class Media implements Xml {
     }
 
     
-    public String generateXML() {
+    public String generateXml() {
         String resultado= "";
         resultado += "<Media>\n";
         resultado += " <id>"+ this.id + "</id>\n";

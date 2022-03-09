@@ -1,5 +1,5 @@
 package CutreCloud;
 
 public interface Xml {
-    public String generateXML();
+    public String generateXml();
 }

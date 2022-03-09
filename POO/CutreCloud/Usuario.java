@@ -1,5 +1,8 @@
 package CutreCloud;
 
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 
 import java.util.Iterator;
@@ -103,7 +106,7 @@ public class Usuario implements Xml {
         return "id: "+ this.id + " email: "+ this.email + " password: " + this.password;
     }
 
-    public String generateXML(){
+    public String generateXml(){
         String resultado= "";
         resultado += "<Usuario>\n";
         resultado += " <id>"+ this.id + "</id>\n";
@@ -111,6 +114,19 @@ public class Usuario implements Xml {
         resultado += " <password>"+ this.password + "</password>\n";
         resultado += "</Usuario>";
         return resultado;
+    }
+
+    public void writeXml(){
+        String filename = "./POO/CutreCloud/archivos/"+ this.id + ".xml";
+        File file = new File(filename);
+        try{
+            file.createNewFile();
+            FileWriter salida = new FileWriter(file);
+            salida.write(generateXml());
+            salida.close();
+        }catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 
 }
