@@ -13,7 +13,12 @@ public class UsuarioInput {
                 String email = sc.nextLine();
                 System.out.println("");
                 System.out.print("Introduce la contraseña: ");
-                String password;
+                String password = sc.nextLine();
+                int i =0;
+                Usuario iUsuario = new Usuario(email, password);
+                i++;
+                System.out.println(iUsuario);
+                System.out.println(i);
             }else{
                 sc.close();
                 break;
