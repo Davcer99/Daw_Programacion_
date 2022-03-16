@@ -4,7 +4,8 @@
         "Controles",
         "Tema2",
         "Tema3",
-        "POO"
+        "POO",
+        "Rpg"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
