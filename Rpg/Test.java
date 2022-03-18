@@ -4,6 +4,7 @@ import Character.Stat.Constitution;
 import Character.Stat.Dexterity;
 import Character.Stat.Intelligence;
 import Character.Stat.Strenght;
+import Item.Food.Apple;
 import Character.Character;
 
 public class Test {
@@ -16,6 +17,9 @@ public class Test {
         System.out.println(pj1.health());
         pj1.recivesDamage(30);
         pj1.heals(3);
+        System.out.println(pj1.health());
+
+        pj1.consumes(new Apple());
         System.out.println(pj1.health());
         
     }

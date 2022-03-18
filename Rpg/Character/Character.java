@@ -6,6 +6,7 @@ import Character.Stat.Constitution;
 import Character.Stat.Dexterity;
 import Character.Stat.Intelligence;
 import Character.Stat.Strenght;
+import Item.IConsumable;
 
 public class Character implements IDamageable {
     
@@ -101,6 +102,11 @@ public class Character implements IDamageable {
         System.out.println(this.name + " healed " + amount + " life. Health: " + health + " / " + maxHealth()); 
     }
 
+    //Método para consumibles
+    public void consumes(IConsumable consumible){
+        consumible.consumedBy(this);
+        System.out.println(this.name + " consumed: " + consumible.getClass().getSimpleName());
+    }
     
 
 }
