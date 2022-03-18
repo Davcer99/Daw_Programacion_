@@ -26,6 +26,6 @@ public abstract class Stat {
    @Override
    // Devuelve el nombre simple de la clase
    public String toString() {
-       return getClass().getName();
+       return getClass().getSimpleName();
    }
 }

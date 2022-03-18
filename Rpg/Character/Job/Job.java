@@ -13,6 +13,6 @@ public abstract class Job {
     
     @Override
     public String toString() {
-        return getClass().getName();
+        return getClass().getSimpleName();
     }
 }
