@@ -102,11 +102,9 @@ public class Character implements IDamageable {
         System.out.println(this.name + " healed " + amount + " life. Health: " + health + " / " + maxHealth()); 
     }
 
-    //Método para consumibles
+    //Método para consumir objetos consumibles
     public void consumes(IConsumable consumible){
         consumible.consumedBy(this);
         System.out.println(this.name + " consumed: " + consumible.getClass().getSimpleName());
     }
-    
-
 }
