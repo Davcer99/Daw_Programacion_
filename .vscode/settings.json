@@ -5,11 +5,12 @@
         "Tema2",
         "Tema3",
         "POO",
-        "Rpg"
+        "Rpg",
+        "Ficheros"
     ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "POO/jl1.0.1.jar"
     ],
-    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx2G -Xms100m"
+    "java.jdt.ls.vmargs": "-XX:+UseParallelGC -XX:GCTimeRatio=4 -XX:AdaptiveSizePolicyWeight=90 -Dsun.zip.disableMemoryMapping=true -Xmx4G -Xms100m"
 }
