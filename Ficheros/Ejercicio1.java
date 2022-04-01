@@ -1,5 +1,7 @@
 import java.io.File;
 import java.io.IOException;
+import java.text.DateFormat;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Ejercicio1 {
@@ -14,8 +16,12 @@ public class Ejercicio1 {
 
                System.out.println("---------------------------------------------------");
                if (f.getParent() != null) {
-                System.out.println("0.- Directorio padre"); 
+                    System.out.println("0.- Directorio padre"); 
                }
+               DateFormat formatter;
+
+                
+               formatter = DateFormat.getDateTimeInstance(DateFormat.MEDIUM, DateFormat.MEDIUM, Locale.getDefault());
                
 
                int num = 1;
@@ -24,14 +30,14 @@ public class Ejercicio1 {
                     if (!e.isHidden()) {
 
                         if (e.isFile()) {
-            
-                            System.out.println(num + ".- " + e.getName() + " " + e.length());
+                            
+                            System.out.println(num + ".-\t"+ generatePermisos(e) +"\t"+ String.format("%-15d", e.length()) + formatter.format(e.lastModified()) + "\t" + e.getName());
                             num++; 
                         }
             
                         if (e.isDirectory()){
-            
-                            System.out.println(num + ".- " +e.getName() + " <Directorio>");
+                            
+                            System.out.println(num + ".-\t"+ generatePermisos(e) +"\t"+ String.format("%-15d", e.length()) + formatter.format(e.lastModified()) + "\t" + e.getName());
                             num++;
                         }
             
@@ -52,6 +58,33 @@ public class Ejercicio1 {
 
     }
 
+private static String generatePermisos(File f) {
+    String permisos= "";
+       
+    if (f.isDirectory()){
+        permisos+= "d";
+    }else{
+        permisos+="-";
+    }
+    if (f.canRead()){
+        permisos+= "r";
+    }else{
+        permisos+= "-";
+    }
+    if (f.canWrite()){
+        permisos += "w";
+    }else{
+        permisos += "-";
+    }
+    if (f.canExecute()){
+        permisos += "x";
+    }else{
+        permisos += "-";
+    }
+    return permisos;
+        
+}
+    
    private static int leerOpcion(){
         Scanner sc = new Scanner(System.in);
         String entradaUsuario = "";
