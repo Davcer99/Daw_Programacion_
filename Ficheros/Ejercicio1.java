@@ -1,6 +1,5 @@
 import java.io.File;
 import java.io.IOException;
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Ejercicio1 {
@@ -14,7 +13,10 @@ public class Ejercicio1 {
                System.out.println("Lista de ficheros y directorios del directorio: " + f.getCanonicalPath());
 
                System.out.println("---------------------------------------------------");
-               System.out.println("0.- Directorio padre");
+               if (f.getParent() != null) {
+                System.out.println("0.- Directorio padre"); 
+               }
+               
 
                int num = 1;
                 for (File e : f.listFiles()){
@@ -40,38 +42,44 @@ public class Ejercicio1 {
 
                System.out.println("No es un directorio");
 
-           }
+            }
 
        } else {
 
            System.out.println("No existe el directorio");
 
-       }
+        }
 
+    }
+
+   private static int leerOpcion(){
+        Scanner sc = new Scanner(System.in);
+        String entradaUsuario = "";
+        int resultado = 0;
+
+        System.out.println("Introduce una opción (-1 para finalizar)");
+        entradaUsuario= sc.nextLine();
+        resultado= Integer.parseInt(entradaUsuario);
+        return resultado;
    }
 
    public static void main(String[] args) throws IOException {
 
-       File f = File.listRoots()[0];
-        ArrayList <String> l1 = new ArrayList<String>();
-        for (String string : f.list()) {
-            l1.add(string);
-        }
-
-        Scanner sc = new Scanner(System.in);
-        int value;
-        while (true) {
-            try {
-
-                imprimirDirectorio(f);
-     
-            } catch(IOException e) {
-     
-                System.out.println("No existe el directorio");
-     
-            } 
-            System.out.println("Introduce una opción (-1 para finalizar)");
-            value = sc.nextInt();
-        }
+        File actualFile = File.listRoots()[0];
+        int opcion;
+        
+        do {
+            imprimirDirectorio(actualFile);
+            opcion = leerOpcion();
+            if (opcion >= 1 && opcion <= actualFile.listFiles().length) {
+                if (actualFile.listFiles()[opcion-1].isDirectory()&& actualFile.listFiles()[opcion-1].canRead()){
+                    actualFile = actualFile.listFiles()[opcion-1];
+                }
+                
+            }else if (actualFile.getParent() != null && opcion == 0){
+                actualFile = actualFile.getParentFile();
+            }
+        } while (opcion != -1);
+       
     }
 }
