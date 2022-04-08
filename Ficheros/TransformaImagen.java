@@ -4,7 +4,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 
 public class TransformaImagen {
-    File f = null;
+    File f;
     public TransformaImagen(File fEnt) {        
         if(!fEnt.getName().substring(fEnt.getName().indexOf(".")).equals(".bmp")) {
                 
