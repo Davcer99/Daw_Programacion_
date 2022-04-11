@@ -13,12 +13,12 @@ public class ContarPalabras {
         String palabra = sc.nextLine();
         sc.close();
 
-        String c = bf1.readLine();
+        String linea = bf1.readLine();
         int vecesRepetida = 0;
 
-        while (c != null) {
-            vecesRepetida += contarCaracteres(c, palabra);
-            c = bf1.readLine();
+        while (linea != null) {
+            vecesRepetida += contarRepeticiones(linea, palabra);
+            linea = bf1.readLine();
         }
 
         System.out.println("La palabra " + palabra + " se repite " + vecesRepetida + " veces en el texto.");
@@ -26,11 +26,11 @@ public class ContarPalabras {
         fr1.close();
     }
 
-    public static int contarCaracteres(String cadena, String palabra) {
+    public static int contarRepeticiones(String cadena, String palabra) {
         int cnt = 0;
         String[] palabras = cadena.split("\\s+");
-        for (String w : palabras) {
-            if (palabra.equals(w)){
+        for (String word : palabras) {
+            if (palabra.equals(word)){
                 cnt++;
             }
         }
