@@ -10,16 +10,26 @@ public class EliminarComentarios {
         FileWriter f_out = new FileWriter("./archivos/pruebaSinComentarios.java");
 
         String linea = bf1.readLine();
+        boolean comentario= false;
 
         while (linea != null) {
-            if (linea.contains("//")) {
+            
+            if (linea.contains("/*")) {
+                comentario = true;
+            }
+            if (linea.contains("//") && comentario == false) {
                 String[]cadenas = linea.split("//");
                 linea = cadenas[0];
+                comentario = false;
             }
-            
-            f_out.write(linea);
-            linea = "\n";
-            f_out.write(linea);
+            if (comentario == false) {
+                f_out.write(linea);
+                linea = "\n";
+                f_out.write(linea); 
+            }
+            if (linea.contains("*/")) {
+                comentario = false;
+            }
             linea = bf1.readLine();
         }
 
