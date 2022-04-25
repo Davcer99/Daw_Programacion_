@@ -7,34 +7,34 @@ public class Mezclar2 {
     public static void main(String[] args) throws IOException {
         
         FileReader fr1 = new FileReader("./archivos/f1.txt");
-        BufferedReader bf1 = new BufferedReader(fr1); 
+        BufferedReader lectorPrimerFichero = new BufferedReader(fr1); 
         
         FileReader fr2 = new FileReader("./archivos/f2.txt");
-        BufferedReader bf2 = new BufferedReader(fr2);
+        BufferedReader lectorSegundoFichero = new BufferedReader(fr2);
 
-        FileWriter f_out = new FileWriter("./archivos/f3.txt");
+        FileWriter ficheroMezcla = new FileWriter("./archivos/f3.txt");
 
-        String c = bf1.readLine();
-        String d = bf2.readLine();
+        String lineaPrimerFichero = lectorPrimerFichero.readLine();
+        String lineaSegundoFichero = lectorSegundoFichero.readLine();
         
 
-        while (c != null || d != null) {
-            if (c != null){
-               f_out.write(c);
-               c = "\n";
-               f_out.write(c);
-               c = bf1.readLine();
+        while (lineaPrimerFichero != null || lineaSegundoFichero != null) {
+            if (lineaPrimerFichero != null){
+               ficheroMezcla.write(lineaPrimerFichero);
+               lineaPrimerFichero = "\n";
+               ficheroMezcla.write(lineaPrimerFichero);
+               lineaPrimerFichero = lectorPrimerFichero.readLine();
             }
-            if (d != null){
-                f_out.write(d);
-                d = "\n";
-                f_out.write(d);
-                d = bf2.readLine();   
+            if (lineaSegundoFichero != null){
+                ficheroMezcla.write(lineaSegundoFichero);
+                lineaSegundoFichero = "\n";
+                ficheroMezcla.write(lineaSegundoFichero);
+                lineaSegundoFichero = lectorSegundoFichero.readLine();   
             }
         }
-        bf1.close();
-        bf2.close();
-        f_out.close();
+        lectorPrimerFichero.close();
+        lectorSegundoFichero.close();
+        ficheroMezcla.close();
     }  
 }
 
