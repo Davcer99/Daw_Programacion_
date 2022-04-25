@@ -6,58 +6,58 @@ import java.io.IOException;
 public class EliminarComentarios {
     public static void main(String[] args) throws IOException {
         FileReader fr1 = new FileReader("./archivos/prueba.java");
-        BufferedReader bf1 = new BufferedReader(fr1);
-        FileWriter f_out = new FileWriter("./archivos/pruebaSinComentarios.java");
+        BufferedReader lectorFichero = new BufferedReader(fr1);
+        FileWriter archivoSalida = new FileWriter("./archivos/pruebaSinComentarios.java");
 
-        String linea = bf1.readLine();
-        boolean comentario= false;
+        String lineaFichero = lectorFichero.readLine();
+        boolean esUnComentario= false;
 
-        while (linea != null) {
+        while (lineaFichero != null) {
 
             // comprobar si es un comentario multilinea 
-            if (linea.contains("/*")) {
-                comentario = true;
+            if (lineaFichero.contains("/*")) {
+                esUnComentario = true;
             }
 
             //comprobar si hay un comentario en la linea y si es asi aislarlo y no imprimirlo
-            if (linea.contains("//") && comentario == false) {
-                String[]cadenas = linea.split("//");
-                linea = cadenas[0];
-                comentario = false;
+            if (lineaFichero.contains("//") && esUnComentario == false) {
+                String[]cadenas = lineaFichero.split("//");
+                lineaFichero = cadenas[0];
+                esUnComentario = false;
             }
 
-            //comprobar si es una linea en blanco y no imprimirla
-            if (esUnaLineaEnBlanco(linea)) {
-                comentario = true;
+            //comprobar si es una linea en blanco y que no la imprima
+            if (esUnaLineaEnBlanco(lineaFichero)) {
+                esUnComentario = true;
             }
         
-            if (comentario == false) {
+            if (esUnComentario == false) {
                 // eliminar todos los espacios de las lineas antes de imprimir
-                linea = linea.replaceAll("  ","");
+                lineaFichero = lineaFichero.replaceAll("  ","");
                 //imprimir las lineas si no son comentarios 
-                f_out.write(linea);
-                linea = "\n";
-                f_out.write(linea); 
+                archivoSalida.write(lineaFichero);
+                lineaFichero = "\n";
+                archivoSalida.write(lineaFichero); 
             }
 
             //resetear el booleano de comentario para que siga imprimiendo
-            if (esUnaLineaEnBlanco(linea)) {
-                comentario = false;
+            if (esUnaLineaEnBlanco(lineaFichero)) {
+                esUnComentario = false;
             }
 
             // comprobar a ver si ya se ha acabado el comentario multilinea
-            if (linea.contains("*/")) {
-                comentario = false;
+            if (lineaFichero.contains("*/")) {
+                esUnComentario = false;
             }
 
             // actualizar la linea leida
-            linea = bf1.readLine();
+            lineaFichero = lectorFichero.readLine();
         }
         
         //cerrar los lectores de archivos
         fr1.close();
-        bf1.close();
-        f_out.close();
+        lectorFichero.close();
+        archivoSalida.close();
     }
 
     //este método nos permite comprobar si una linea esta en blanco de la siguiente manera:
