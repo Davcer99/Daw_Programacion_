@@ -1,6 +1,8 @@
 package SimulacroExamen;
 
-public class Persona {
+import java.io.Serializable;
+
+public class Persona implements Serializable{
     // atributos
     private int nif;
     private String nombre;

@@ -6,7 +6,7 @@ public class Cliente extends Persona{
     //atributo
     private int id = 0;
     private String email;
-    private ArrayList<Cliente> clientes = new ArrayList<>();
+    private static ArrayList<Cliente> clientes = new ArrayList<>();
 
     //constructor
     public Cliente(int nif, String nombre, String apellidos, String email) {
@@ -29,7 +29,7 @@ public class Cliente extends Persona{
         this.email = email;
     }
 
-    public ArrayList<Cliente> getClientes() {
+    public static ArrayList<Cliente> getClientes() {
         return clientes;
     }
 
