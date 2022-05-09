@@ -11,7 +11,10 @@ import java.util.ArrayList;
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
+import javax.xml.transform.Transformer;
 import javax.xml.transform.TransformerConfigurationException;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
@@ -43,8 +46,8 @@ public class Persistencia extends Cliente{
         salidaFichero.close();
     }
 
-    public void transformXML() throws TransformerConfigurationException, TransformerFactoryConfigurationError, FileNotFoundException, IOException, ParserConfigurationException{
-        ObjectInputStream f = new ObjectInputStream(new FileInputStream("./XmlPasarObjeto.xml"));
+    public void transformXML() throws TransformerFactoryConfigurationError, FileNotFoundException, IOException, ParserConfigurationException, TransformerException{
+        ObjectInputStream f = new ObjectInputStream(new FileInputStream("./objetosSerializados.dat"));
         Document doc = DocumentBuilderFactory.newInstance().newDocumentBuilder().newDocument();
         Element root = doc.createElement("clientes");
         doc.appendChild(root);
@@ -59,10 +62,30 @@ public class Persistencia extends Cliente{
                 Element nif = doc.createElement("NIF");
                 nif.appendChild(doc.createTextNode(Integer.toString(cli.getNif())));
                 cliente.appendChild(nif);
+
+                Element nombre = doc.createElement("nombre");
+                nombre.appendChild(doc.createTextNode(cli.getNombre()));
+                cliente.appendChild(nombre);
+
+                Element apellidos = doc.createElement("apellidos");
+                apellidos.appendChild(doc.createTextNode(cli.getApellidos()));
+                cliente.appendChild(apellidos);
+
+                Element email = doc.createElement("email");
+                email.appendChild(doc.createTextNode(cli.getEmail()));
+                cliente.appendChild(email);
+
+                root.appendChild(cliente);
             }
         } catch (Exception e) {
-            //TODO: handle exception
+            f.close();
         }
+        Transformer trans = TransformerFactory.newInstance().newTransformer();
+        
+        DOMSource source = new DOMSource(doc);
+        StreamResult result = new StreamResult(new FileOutputStream("./Empleados.xml"));
+
+        trans.transform(source, result);
     }
 
     //leer ficheros y crear 
