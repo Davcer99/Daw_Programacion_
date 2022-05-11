@@ -8,7 +8,9 @@ import javax.xml.transform.TransformerFactoryConfigurationError;
 
 public class Test {
     public static void main(String[] args) throws IOException, TransformerFactoryConfigurationError, ParserConfigurationException, TransformerException {
-        Persistencia p1 = new Persistencia(10182736,"David", "B.C", "dbc@gmail.com");
-        p1.transformXML();
+        Cliente p1 = new Cliente(10182736,"David", "B.C", "dbc@gmail.com");
+        Cliente p2 = new Cliente(10386230, "Juan", "L.C", "jlc@gmail.com");
+
+        p1.transformJson();
     }
 }
