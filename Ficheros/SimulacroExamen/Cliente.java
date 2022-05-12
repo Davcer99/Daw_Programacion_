@@ -35,7 +35,7 @@ public class Cliente extends Persona{
     private static ArrayList<Cliente> clientes = new ArrayList<>();
 
     //constructor
-    public Cliente(int nif, String nombre, String apellidos, String email) {
+    public Cliente(String nif, String nombre, String apellidos, String email, String trozos) {
         super(nif, nombre, apellidos);
         this.email = email;
         this.id = generarId();
@@ -83,7 +83,7 @@ public class Cliente extends Persona{
                 cliente.setAttribute("id", Integer.toString(cli.getId()));
 
                 Element nif = doc.createElement("NIF");
-                nif.appendChild(doc.createTextNode(Integer.toString(cli.getNif())));
+                nif.appendChild(doc.createTextNode(cli.getNif()));
                 cliente.appendChild(nif);
 
                 Element nombre = doc.createElement("nombre");
