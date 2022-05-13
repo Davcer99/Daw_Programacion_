@@ -15,7 +15,7 @@ public class Persistencia extends Cliente{
     private static final String nombreFichero = "clientes.dat";
     //constructor
     public Persistencia(String nif, String nombre, String apellidos, String email) {
-        super(nif, nombre, apellidos, email, email);
+        super(nif, nombre, apellidos, email);
     }
     
     //escribir clientes 
@@ -56,7 +56,7 @@ public class Persistencia extends Cliente{
 
             while ((linea = lector.readLine()) != null){
                 String [] trozos = linea.split(",");
-                Cliente cliente = new Cliente(trozos[1], trozos[2], trozos[3], trozos[0], trozos[4]);
+                Cliente cliente = new Cliente(trozos[1], trozos[2], trozos[3], trozos[0]);
                 resultado.add(cliente);
             }
             

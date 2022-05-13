@@ -11,7 +11,7 @@ import java.io.InputStreamReader;
 import java.io.ObjectInputStream;
 import java.io.Writer;
 import java.util.ArrayList;
-import java.util.List;
+
 
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
@@ -21,12 +21,12 @@ import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.TransformerFactoryConfigurationError;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
-import java.lang.reflect.Type;
+
 
 import org.w3c.dom.*;
 
 import com.google.gson.*;
-import com.google.gson.reflect.TypeToken;
+
 
 public class Cliente extends Persona{
     //atributo
@@ -35,12 +35,13 @@ public class Cliente extends Persona{
     private static ArrayList<Cliente> clientes = new ArrayList<>();
 
     //constructor
-    public Cliente(String nif, String nombre, String apellidos, String email, String trozos) {
+    public Cliente(String nif, String nombre, String apellidos, String email) {
         super(nif, nombre, apellidos);
         this.email = email;
         this.id = generarId();
         clientes.add(this);
     }
+    
     // generar id automatico
     private int generarId() {
         return id++;
@@ -127,7 +128,7 @@ public class Cliente extends Persona{
     public void readJson() throws IOException{
         Gson gson = new Gson();
 
-        InputStream f = new FileInputStream("./archivos/gmaps.json");
+        InputStream f = new FileInputStream("./archivos/Ejemplo.json");
 
         final BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(f));
 
