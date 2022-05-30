@@ -1,26 +1,22 @@
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class Usuario {
 
   private String nombre;
   private String apellidos;
   private String email;
-  private int telefono;
-  private static ArrayList <Usuario> listadoUsuarios = new ArrayList<>();
+  private String telefono;
+  
+  public Usuario(){
+    this.nombre = "";
+    this.apellidos = "";
+    this.email = "" ; 
+    this.telefono = "";
+  }
 
-  public Usuario() {
-    Scanner sc = new Scanner(System.in);
-    System.out.println("Introducir el nombre");
-    this.nombre = sc.nextLine();
-    System.out.println("Introducir los apellidos");
-    this.apellidos = sc.nextLine();
-    System.out.println("Introducir el email");
-    this.email = sc.nextLine();
-    System.out.println("Introducir el telefono");
-    this.telefono = sc.nextInt();
-    sc.close();
-    Usuario.listadoUsuarios.add(this);
+  public Usuario(String nombre, String apellidos, String email, String telefono) {
+    this.nombre = nombre;
+    this.apellidos = apellidos;
+    this.email = email;
+    this.telefono = telefono;
   }
 
   public String getNombre() {
@@ -47,20 +43,12 @@ public class Usuario {
     this.email = email;
   }
 
-  public int getTelefono() {
+  public String getTelefono() {
     return telefono;
   }
 
-  public void setTelefono(int telefono) {
+  public void setTelefono(String telefono) {
     this.telefono = telefono;
-  }
-
-  public static ArrayList<Usuario> getListadoUsuarios() {
-    return listadoUsuarios;
-  }
-
-  public static void setListadoUsuarios(ArrayList<Usuario> listadoUsuarios) {
-    Usuario.listadoUsuarios = listadoUsuarios;
   }
   
   @Override

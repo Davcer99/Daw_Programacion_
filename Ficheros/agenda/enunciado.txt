@@ -6,7 +6,7 @@ Crea una aplicación que cumpla los siguientes requisitos:
 
     nombre apellidos email telefono
 
-todo ello separado por tabuladores.
+    todo ello separado por tabuladores.
 
     De forma paralela se debe guardar un objeto con los atributos anteriores en un fichero "agendaObjetos.dat".
 
