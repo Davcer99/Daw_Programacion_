@@ -1,47 +1,31 @@
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 
 /**
- * ConsultaBases
+ * TestDB
  */
 public class ConsultaBases {
 
-    public static void main(String[] av) {
+    public static void main(String[] args) {
+        String consulta = "SELECT count(*) as total FROM Cliente";
+        String connectionUrl = "jdbc:mysql://10.0.2.4/clientes";
 
         try {
-    
-          // Dependiendo de a qué tipo de SGBD queramos conectar cargaremos un controlador u otro
-    
-          // Intentar cargar el driver de MySQL
-    
-          Class<?> c = Class.forName("com.mysql.jdbc.Driver");
-    
-          System.out.println("Cargado " + c.getName());
-    
-          //Definir la url de conexión y los parámetros de usuario y contraseña
-    
-          String host = "jdbc:mysql://192.168.204.181/phpmyadmin";
-    
-          String username = "phpmyadmin";
-    
-          String password = "phpmyadmin";
-    
-          Connection con = DriverManager.getConnection(host, username, password);
-    
-          System.out.println("Conexión completada");
-    
-          con.close();
-    
-        } catch (ClassNotFoundException cnfe) {
-    
-          System.out.println(cnfe.getMessage());
-    
-        } catch (SQLException ex) {
-    
-          System.out.println("Se ha producido un error al conectar: " + ex.getMessage());
-    
+            Class.forName("com.mysql.cj.jdbc.Driver");
+        } catch (ClassNotFoundException e1) {
+            // TODO Auto-generated catch block
+            e1.printStackTrace();
         }
-    
-      }
+
+        try (Connection conn = DriverManager.getConnection(connectionUrl, "phpmyadmin", "phpmyadmin");
+                PreparedStatement ps = conn.prepareStatement(consulta);
+                ResultSet rs = ps.executeQuery()) {
+
+            while (rs.next()) {
+                int total = rs.getInt("total");
+                System.out.println("Total: " + total);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }
