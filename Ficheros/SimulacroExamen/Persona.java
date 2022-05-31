@@ -4,9 +4,9 @@ import java.io.Serializable;
 
 public class Persona implements Serializable{
     // atributos
-    private String nif;
-    private String nombre;
-    private String apellidos;
+    protected String nif;
+    protected String nombre;
+    protected String apellidos;
 
     //constructor
     public Persona(String nif, String nombre, String apellidos) {
@@ -34,13 +34,4 @@ public class Persona implements Serializable{
     protected void setApellidos(String apellidos) {
         this.apellidos = apellidos;
     }
-
-    //to string
-    @Override
-    public String toString() {
-        
-        return "Persona: \nNif:\t" + getNif() + "\nNombre:\t" + getNombre() + "\nApellidos:\t" + getApellidos();
-    }
-
-    
 }
